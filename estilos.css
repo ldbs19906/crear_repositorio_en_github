@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* background: 
+    radial-gradient(black 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+     #fff;
+     background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+     background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+
+     font-family: 'Manjari', sans-serif; */
+
+    background-image: url(./img/Fondoauto.png);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;/*negrita*/
+
+}
+
+/*HEADER*/
+
+
+.title h1{
+
+    padding: 20px 0;
+    text-align: center; 
+    font-size:  2.9em;
+    text-transform: uppercase;
+} 
+
+/* .title{
+    background-image: url(./img/65793-pizza.jpg);
+    background-color: brown;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: red solid;
+} */
+
+.container{
+    
+    width: 90%;
+    max-width: 10000px;
+    margin: 1.6em auto;
+
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+/*Para maracar los contenedores*/
+
+.container > .header,
+.container > .content,
+.container > .sidebar,
+.container > .footer,
+/* .container > .related-post, */
+.container > .div{
+
+    background: rgb(109, 110, 214);
+    padding:20px;
+    border: 1px solid black; 
+}
+
+/*Organizar header y footer*/
+
+.container .header{
+
+    grid-column: 1/6 ; /*Para que el header  abarquen las 6 columnas*/
+    
+    background-image: url(./img/Auto2.jpg);
+    background-color: rgb(160, 168, 216);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: rgb(166, 123, 195) solid;
+
+    color:rgb(87, 119, 179);
+    font-size: 30px;
+    padding:2rem;
+}
+.container .footer{
+    grid-column: 1/6 ; /*Para que el header y footer abarquen las 6 columnas*/
+    background: rgb(38, 38, 139);
+    color: #fff;
+    text-align: center;
+}
+
+/*Organizar el contenido*/
+
+.container > .content{
+    grid-column: span 3; /*Se indica que abarca 3 columnas*/
+    background-color: rgb(97, 199, 230);
+
+}
+
+.content > .article{
+
+    background: #808390;
+    padding:20px;
+    margin-top: 5px;
+    color: #dfe6e9;
+}
+
+.content .article h1,
+.content .article p{
+    padding:10px;
+}
+
+
+.container .sidebar{
+    grid-column: span 2;
+    background: #485460;
+    color:#fff;
+    display: flex; /*Uso flexbox para centrar los elementos*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+
+.container .sidebar img{
+
+    width: 100%;
+    margin-top: 5px;
+
+}
+
+/* .container .related-post{
+    background: #2d3436;
+    color:#fff;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease; /*se complementa con hover*/
+
+/* } */
+
+/* .container .related-post:hover{
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+}  */
+/*footer*/
+.footer__flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__menu{
+
+    list-style: none;
+    text-align: center;
+}
+
+.footer__menu a{
+
+    color:white;
+    text-decoration: none;
+
+}
+
+/*Para celular*/
+
+@media(max-width:768px ){
+
+    .header{
+        text-align: center;
+    }
+
+    .container .content{
+
+        grid-column: 1/-1; /*Para que abarque todo el ancho*/
+    }
+
+    .container .sidebar{
+
+        grid-column: 1/-1; /*Para que abarque desde el inicio hasta el fin*/
+    }
+
+    /* .container .related-post{
+
+        grid-column: 1/-1; 
+    } */
+}
