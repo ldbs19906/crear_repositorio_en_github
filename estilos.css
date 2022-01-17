@@ -28,23 +28,61 @@ body{
 
 /*HEADER*/
 
+header{
+    
+    background: #4e94ab;
+}
 
-.title h1{
+#btn-menu{
+    display: none; /*desaparece el boton de la maquetacion*/
+}
 
-    padding: 20px 0;
-    text-align: center; 
-    font-size:  2.9em;
-    text-transform: uppercase;
-} 
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right:1px solid #fff ;
+    
+}
 
-/* .title{
-    background-image: url(./img/65793-pizza.jpg);
-    background-color: brown;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: red solid;
-} */
+header label:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+.menu ul{
+    margin: 0;
+    list-style:none ;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+
+    /*Para que este alineado a la derecha*/
+    justify-content: flex-end;
+    
+}
+
+.menu li{
+
+   border-right:1px solid #fff ;
+
+
+}
+
+.menu li:hover{
+    background: rgba(0,0,0,0.3);
+}
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+/*Fin header*/
 
 .container{
     
@@ -64,7 +102,6 @@ body{
 .container > .content,
 .container > .sidebar,
 .container > .footer,
-/* .container > .related-post, */
 .container > .div{
 
     background: rgb(109, 110, 214);
