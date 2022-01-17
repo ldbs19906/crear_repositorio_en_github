@@ -211,7 +211,37 @@ header label:hover{
 
 @media(max-width:768px ){
 
-    .header{
+    header label{
+        display: block;
+        
+    }
+
+    .menu{
+        position: absolute;
+        background: #4e94ab;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+       
+    }
+
+    .menu ul{
+        flex-direction: column;
+        
+
+    }
+    .menu li{
+        border-top: 1px solid #fff ;
+        
+    }
+
+    #btn-menu:checked ~ .menu {
+        margin:0;
+                
+
+    }
+
+    .container .header{
         text-align: center;
     }
 
@@ -225,8 +255,5 @@ header label:hover{
         grid-column: 1/-1; /*Para que abarque desde el inicio hasta el fin*/
     }
 
-    /* .container .related-post{
-
-        grid-column: 1/-1; 
-    } */
+ 
 }
